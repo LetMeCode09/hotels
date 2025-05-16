@@ -1,3 +1,9 @@
+import com.svalero.hotels.model.Room;
+
+import java.sql.Connection;
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
+
 public class RoomDao {
 
 
