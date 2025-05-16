@@ -1,41 +1,46 @@
+package com.svalero.hotels.dao;
+
 import com.svalero.hotels.model.Room;
 
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
+import java.sql.SQLException;
+import java.util.ArrayList;
+import java.util.List;
 
 public class RoomDao {
-
 
     private Connection connection;
 
     public RoomDao(Connection connection) {
-
         this.connection = connection;
     }
 
-    public getAll() {
-        String sql = "SELECT * FROM HOTELS";
+    public List<Room> getAll() throws SQLException {
 
-        PreparedStatement statement = null;
-        ResultSet result = null;
-        statement = connection.prepareStatement(sql);
+            String sql = "SELECT * FROM HOTELS";
 
-        ResultSet result = statement.executeQuery();
-        ArrayList<Room> roomList = new ArrayList<>();
+            PreparedStatement statement = statement = connection.prepareStatement(sql);
 
-        while (result.next()) {
-            Room room = new Room();
-            room.setIdRoom(result.getInt("id_room"));
-            room.setRoomNumber(result.getInt("room_number"));
-            room.setIdRoomType(result.getInt("room_type"));
-            room.setPriceNight(result.getInt("price_night"));
-            room.setAvailable(result.getInt("avaible"));
-            room.setDescription(result.getInt("description"));
+            ResultSet result = statement.executeQuery();
 
-        }
+            ArrayList<Room> roomList = new ArrayList<>();
 
-        result.close();
-        statement.close();
-        return Room;
+            while (result.next()) {
+
+                Room room = new Room();
+                room.setIdRoom(result.getInt("id_room"));
+                room.setRoomNumber(result.getInt("room_number"));
+                room.setRoomType(result.getString("room_type"));
+                room.setPriceNight(result.getInt("price_night"));
+                room.setAvailable(result.getBoolean("avaible"));
+                room.setDescription(result.getString("description"));
+
+                roomList.add(room);
+            }
+            result.close();
+            statement.close();
+            return roomList;
     }
+}
