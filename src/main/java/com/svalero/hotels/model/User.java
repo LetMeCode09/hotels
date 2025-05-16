@@ -16,7 +16,7 @@ public class User {
     public User() {}
 
     public User(int idUser, String username, String firstName, String lastName, String dni, String email, String phone, String password, String role) {
-        this.userId = idUser;
+        this.idUser = idUser;
         this.username = username;
         this.firstName = firstName;
         this.lastName = lastName;
