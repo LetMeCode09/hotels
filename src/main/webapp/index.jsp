@@ -1,6 +1,7 @@
 <%@ page import="com.svalero.hotels.database.Database" %>
 <%@ page import="com.svalero.hotels.model.Room" %>
 <%@ page import="java.util.List" %>
+<%@ page import="com.svalero.hotels.dao.RoomDao" %>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <%@ include file="includes/header.jsp" %>
 <%@ include file="includes/navbar.jsp" %>
@@ -16,7 +17,10 @@ Database database = new Database();
 database.connect();
 
 RoomDao roomDao = new RoomDao(database.getConnection());
-
-List<Room> roomList;
-
 %>
+
+<div>
+    <%
+        List<Room> roomList;
+    %>
+</div>
