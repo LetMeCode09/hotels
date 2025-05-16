@@ -30,6 +30,8 @@ public class Booking {
 
     public void setIdUser(int idUser) {this.idUser = idUser;}
 
+    public LocalDate getStartDate() {return startDate;}
+
     public void setStartDate(LocalDate startDate) {this.startDate = startDate;}
 
     public LocalDate getEndDate() {return endDate;}
