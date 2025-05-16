@@ -31,7 +31,10 @@ Database database = new Database();
 database.connect();
 
 RoomDao roomDao = new RoomDao(database.getConnection());
-
-List<Room> roomList;
-
 %>
+
+<div>
+    <%
+        List<Room> roomList;
+    %>
+</div>
