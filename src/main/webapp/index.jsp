@@ -17,6 +17,6 @@ database.connect();
 
 RoomDao roomDao = new RoomDao(database.getConnection());
 
-List<Room> roomList:
+List<Room> roomList;
 
 %>
