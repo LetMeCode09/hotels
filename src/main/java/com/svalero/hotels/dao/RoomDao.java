@@ -34,7 +34,7 @@ public class RoomDao {
                 room.setRoomNumber(result.getInt("room_number"));
                 room.setRoomType(result.getString("room_type"));
                 room.setPriceNight(result.getInt("price_night"));
-                room.setAvailable(result.getBoolean("avaible"));
+                room.setAvailable(result.getBoolean("available"));
                 room.setDescription(result.getString("description"));
 
                 roomList.add(room);
