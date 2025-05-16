@@ -19,7 +19,7 @@ public class RoomDao {
 
     public List<Room> getAll() throws SQLException {
 
-            String sql = "SELECT * FROM HOTELS";
+            String sql = "SELECT * FROM rooms";
 
             PreparedStatement statement = statement = connection.prepareStatement(sql);
 
