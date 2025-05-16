@@ -9,20 +9,28 @@
 
 
 <h1>Esta es nuestra página de el hotel</h1>
-<div class="login-container">
+<div class="container hstack gap-3">
+<div class="login-container mb-3 ">
     <div class="login-box">
         <h1>Bienvenido a <span>MagicBinder</span></h1>
         <p>Inicia sesión para acceder a tu colección de cartas</p>
 
         <form action="LoginServlet" method="post">
-            <input type="text" name="username" placeholder="Usuario" required>
-            <input type="password" name="password" placeholder="Contraseña" required>
-            <button type="submit">Entrar</button>
+            <div class="mb-3">
+                <label class="form-label">Usuario</label>
+                <input type="text" name="username" class="form-control" required>
+            </div>
+            <div class="mb-3">
+                <label for="exampleInputPassword1" class="form-label">Contraseña</label>
+                <input type="password" name="password" class="form-control" required>
+            </div>
+            <button type="submit" class="btn btn-primary">Entrar</button>
         </form>
 
         <p>¿No tienes cuenta? <a href="registerUser.jsp">Regístrate aquí</a></p>
     </div>
 </div>
+
 
 <%@ include file="includes/footer.jsp" %>
 <%

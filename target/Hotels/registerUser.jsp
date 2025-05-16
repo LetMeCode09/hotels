@@ -9,7 +9,7 @@
 <%@ include file="includes/search-room.jsp" %>
 
 
-
+<div class="container hstack gap-3" >
 <div class="bg-custom-employee">
     <form action = "ResgisterServlet" method ="post" class="row g-3">
         <div class="col-12">
@@ -47,4 +47,5 @@
             No se ha podido crear el usuario!
         </div>
     </form>
+</div>
 </div>
