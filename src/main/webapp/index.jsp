@@ -14,13 +14,24 @@
 <%
 
 Database database = new Database();
-database.connect();
-
 RoomDao roomDao = new RoomDao(database.getConnection());
+
+List<Room> roomList = roomDao.getAll();
+
+
 %>
 
 <div>
     <%
-        List<Room> roomList;
+    for (Room room : roomList) {
+    %>
+    <li>
+        Habitación <strong><%= room.getRoomNumber() %></strong><br>
+        Precio/noche: <%= room.getPriceNight() %> €<br>
+        Disponible: <%= room.isAvailable() ? "Sí" : "No" %><br>
+        Descripción: <%= room.getDescription() %>
+    </li>
+<%
+        }
     %>
 </div>
