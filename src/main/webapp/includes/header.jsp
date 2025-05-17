@@ -1,36 +1,11 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
-
-<footer class="bg-dark text-light mt-5 pt-4">
-    <div class="container">
-        <div class="row">
-
-            <div class="col-md-6 mb-3">
-                <h5>VICE CITY HOTELS</h5>
-                <p class="mb-0">Your place to manage rooms. Thank you for being with us.</p>
-            </div>
-
-            <div class="col-md-3 mb-3">
-                <h6>Links</h6>
-                <ul class="list-unstyled">
-                    <li><a href="index.jsp" class="text-light text-decoration-none">Home</a></li>
-                    <li><a href="roomList.jsp" class="text-light text-decoration-none">Rooms</a></li>
-                    <li><a href="registerUser.jsp" class="text-light text-decoration-none">Register</a></li>
-                </ul>
-            </div>
-
-            <div class="col-md-3 mb-3">
-                <h6>Contact</h6>
-                <p class="mb-1">Email: <a href="mailto:contacto@magicbinder.com" class="text-light text-decoration-none">contact@vicecityhotels.com</a></p>
-                <p class="mb-0">Tel: +34 123 456 789</p>
-            </div>
-
-        </div>
-    </div>
-
-    <div class="bg-secondary text-center text-white py-3 mt-4">
-        ©️ 2025 Vice City Hotels · All rights reserved
-    </div>
-</footer>
-
-</body>
-</html>
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>VICE CITY HOTELS</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4Q6Gf2aSP4eDXB8Miphtr37CMZZQ5oXLH2yaXMJ2w8e2ZtHTl7GptT4jmndRuHDT" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/styles.css">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/js/bootstrap.bundle.min.js" integrity="sha384-j1CDi7MgGQ12Z7Qab0qlWQ/Qqz24Gc6BM0thvEMVjHnfYGF0rmFCozFSxQBxwHKO" crossorigin="anonymous"></script>
+</head>
+<body>
