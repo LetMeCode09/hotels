@@ -1,6 +1,8 @@
 package com.svalero.hotels.dao;
 
+import com.svalero.hotels.exception.RoomNotFoundException;
 import com.svalero.hotels.model.Room;
+import com.svalero.hotels.model.User;
 
 import java.sql.Connection;
 import java.sql.PreparedStatement;
@@ -42,5 +44,54 @@ public class RoomDao {
             result.close();
             statement.close();
             return roomList;
+    }
+
+    public Room getById(int id) throws SQLException, RoomNotFoundException {
+
+        String sql = "SELECT * FROM ROOMS WHERE id_room = ?";
+        PreparedStatement statement = null;
+        ResultSet result = null;
+        statement = connection.prepareStatement(sql);
+        statement.setInt(1, id);
+        result = statement.executeQuery();
+
+        if (!result.next()) {
+            throw new RoomNotFoundException();
+        }
+
+        Room room = new Room();
+        room.setIdRoom(result.getInt("id_room"));
+        room.setRoomNumber(result.getInt("room_number"));
+        room.setRoomType(result.getString("type"));
+        room.setPriceNight(result.getInt("price_night"));
+        room.setAvailable(result.getBoolean("available"));
+        room.setDescription(result.getString("description"));
+
+        statement.close();
+
+        return (room);
+    }
+
+    public boolean add(Room room) throws SQLException {
+        String sql = "INSERT INTO ROOM (id_room, room_number, type, price_night, ) VALUES (?,?,?,?,?,?,?,?,?,?)";
+        PreparedStatement statement = statement = connection.prepareStatement(sql);
+
+        //UPDATE, INSERT, DELETE SE EJEVUTAN CON ESTE
+        int affectedRows = statement.executeUpdate();
+        //execute.query PARA LAS CONSULTAS SELECT
+
+        //DEVUELVO BOOLEANO PARA SABER SI AFECTA A LAS ROWS O NO
+        return affectedRows != 0;
+    }
+
+    public boolean deleteRoomById(int id) throws SQLException {
+
+        String sql = "DELETE FROM ROOM WHERE id_room = ?";
+        PreparedStatement statement = connection.prepareStatement(sql);
+        statement.setInt(1, id);
+
+        int affectedRows = statement.executeUpdate();
+        //SI HAY INEAS AFECTADAS, DE VOLVERA TRUE PORQUE ES DISTINDO QUE 0.
+        return affectedRows != 0;
     }
 }
