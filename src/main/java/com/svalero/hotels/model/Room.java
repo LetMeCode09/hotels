@@ -30,10 +30,6 @@ public class Room {
 
     public double getPriceNight() {return priceNight;}
 
-    public String getType() {return Type;}
-
-    public boolean getAvailable() {return available;}
-
     public double getRoomNumber() {return roomNumber;}
 
     public void setPriceNight(double priceNight) {this.priceNight = priceNight;}
