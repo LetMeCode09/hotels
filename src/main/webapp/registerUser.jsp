@@ -1,14 +1,14 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <%@ include file="includes/header.jsp" %>
 <%@ include file="includes/navbar.jsp" %>
-<%@ include file="includes/search-room.jsp" %>
+
 
 <div class="container my-5">
     <div class="row justify-content-center">
         <div class="col-md-8 col-lg-6">
-            <div class="card shadow-sm">
-                <div class="card-header text-center bg-success text-white">
-                    <h4>Registro de Usuario</h4>
+            <div class="card shadow-sm fondo-rosita">
+                <div class="card-header text-center bg-rosa-fuerte text-white">
+                    <h4 class="mb-0 text-dark" >Registro de Usuario</h4>
                 </div>
                 <div class="card-body">
                     <form action="RegisterServlet" method="post" class="row g-3">
@@ -48,7 +48,7 @@
                         </div>
 
                         <div class="col-12">
-                            <button type="submit" class="btn btn-success w-100">Comenzar</button>
+                            <button type="submit" class="btn btn-rosa w-100">Comenzar</button>
                         </div>
 
                         <div id="result" class="alert alert-danger mt-2 text-center" role="alert" style="display: none">

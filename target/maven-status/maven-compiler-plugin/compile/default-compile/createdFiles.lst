@@ -1,4 +1,3 @@
-com\svalero\hotels\servlet\SearchRoomServlet.class
 com\svalero\hotels\servlet\AddToUserServlet.class
 com\svalero\hotels\servlet\RegisterServlet.class
 com\svalero\hotels\dao\BookingDao.class
