@@ -70,17 +70,6 @@ public class BookingDao {
         return bookings;
     }
 
-    public boolean update(Booking booking) throws SQLException {
-        String sql = "UPDATE bookings SET id_user = ?, id_room = ?, start_date = ?, end_date = ? WHERE id_booking = ?";
-        try (PreparedStatement statement = connection.prepareStatement(sql)) {
-            statement.setInt(1, booking.getIdUser());
-            statement.setInt(2, booking.getIdRoom());
-            statement.setDate(3, Date.valueOf(booking.getStartDate()));
-            statement.setDate(4, Date.valueOf(booking.getEndDate()));
-            statement.setInt(6, booking.getIdBooking());
-            return statement.executeUpdate() > 0;
-        }
-    }
 
     public boolean delete(int bookingId) throws SQLException {
         String sql = "DELETE FROM bookings WHERE id_booking = ?";

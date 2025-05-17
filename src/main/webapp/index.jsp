@@ -12,7 +12,7 @@
 
     <div class="row justify-content-center">
         <div class="col-md-6">
-            <div class="card shadow-sm">
+            <div class="card shadow-sm fondo-transparente shadow-sm">
                 <div class="card-body">
                     <form action="LoginServlet" method="post">
                         <div class="mb-3">
