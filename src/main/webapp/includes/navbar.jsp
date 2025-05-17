@@ -21,9 +21,16 @@
                     <a class="nav-link" href="room-list.jsp">Habitaciones</a>
                 </li>
 
-                <li class="nav-item">
-                    <a class="nav-link" href="index.jsp">Login</a>
-                </li>
+                <% if (user == null) { %>
+                <li><a href="registerUser.jsp">Registrarse</a></li>
+                <li><a href="index.jsp">Iniciar sesión</a></li>
+                <% } else { %>
+                <% if ("user".equals(user.getRole())) { %>
+                <li><a href="UserZoneServlet">Mi zona</a></li>
+                <% } %>
+                <li class="navbar-user">Hola, <%= user.getUsername() %></li>
+                <li><a href="LogoutServlet">Cerrar sesión</a></li>
+                <% } %>
 
             </ul>
         </div>
