@@ -9,3 +9,26 @@ html, body {
     display: flex;
     flex-direction: column;
 }
+.texto-rosa {
+    color: #ff00cc !important; /* Rosa fosforito */
+    text-shadow: 0 0 5px #ff99dd; /* Brillito suave opcional */
+}
+/* Botón rosa fosforito */
+.btn-rosa {
+    background-color: #ff1493; /* rosa fuerte / fosforito */
+    color: white;
+    border: none;
+}
+
+
+.btn-rosa:hover {
+    background-color: #ff69b4; /* rosa un poquito más claro al pasar el mouse */
+    color: white;
+}
+
+/* Fondo rosa claro para la tarjeta */
+.fondo-rosita {
+    background-color: #ffe6f0 !important; /* rosita pastel */
+    border-radius: 1rem;
+    padding: 1rem;
+}
