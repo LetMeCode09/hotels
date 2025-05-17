@@ -1,16 +1,36 @@
-<%--
-  Created by IntelliJ IDEA.
-  User: Portatil
-  Date: 17/05/2025
-  Time: 9:21
-  To change this template use File | Settings | File Templates.
---%>
+<%@ page import="com.svalero.hotels.model.User" %>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
-<html>
-<head>
-    <title>Title</title>
-</head>
-<body>
+<%@ include file="includes/header.jsp" %>
+<%@ include file="includes/navbar.jsp" %>
 
-</body>
-</html>
+<%
+    if (user == null || !"admin".equals(user.getRole())) {
+        response.sendRedirect("index.jsp");
+        return;
+    }
+%>
+
+<div class="container my-5">
+    <h2 class="text-center texto-lila mb-5">Administrator Panel</h2>
+
+    <div class="row g-4 justify-content-center">
+
+        <div class="col-md-4">
+            <div class="card fondo-rosita shadow-sm text-center p-3">
+                <h5 class="texto-rosa">Room Management</h5>
+                <p>View, edit, and delete the available hotel rooms.</p>
+                <a href="room-list.jsp" class="btn btn-rosa">View Rooms</a>
+            </div>
+        </div>
+
+        <div class="col-md-4">
+            <div class="card fondo-rosita shadow-sm text-center p-3">
+                <h5 class="texto-rosa">User Management </h5>
+                <p>Manage accounts, roles, and data of registered users.</p>
+                <a href="admin-usuarios.jsp" class="btn btn-rosa">View Users</a>
+            </div>
+        </div>
+    </div>
+</div>
+
+<%@ include file="includes/footer.jsp" %>
