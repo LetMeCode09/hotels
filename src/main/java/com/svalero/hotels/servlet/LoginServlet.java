@@ -32,7 +32,7 @@ public class LoginServlet extends HttpServlet {
             if ("admin".equalsIgnoreCase(user.getRole())) {
                 response.sendRedirect("admin-dashboard.jsp");
             } else {
-                response.sendRedirect("user-zone.jsp");
+                response.sendRedirect("room-list.jsp");
             }
 
         } catch (UserNotFoundException e) {
