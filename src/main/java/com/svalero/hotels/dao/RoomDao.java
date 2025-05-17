@@ -23,7 +23,7 @@ public class RoomDao {
 
             String sql = "SELECT * FROM rooms";
 
-            PreparedStatement statement = statement = connection.prepareStatement(sql);
+            PreparedStatement statement = connection.prepareStatement(sql);
 
             ResultSet result = statement.executeQuery();
 
