@@ -8,7 +8,7 @@ C:\Users\Portatil\Desktop\hotels\src\main\java\com\svalero\hotels\exception\User
 C:\Users\Portatil\Desktop\hotels\src\main\java\com\svalero\hotels\model\Booking.java
 C:\Users\Portatil\Desktop\hotels\src\main\java\com\svalero\hotels\model\Room.java
 C:\Users\Portatil\Desktop\hotels\src\main\java\com\svalero\hotels\model\User.java
-C:\Users\Portatil\Desktop\hotels\src\main\java\com\svalero\hotels\servlet\AddToUserServlet.java
+C:\Users\Portatil\Desktop\hotels\src\main\java\com\svalero\hotels\servlet\AddRoomServlet.java
 C:\Users\Portatil\Desktop\hotels\src\main\java\com\svalero\hotels\servlet\DeleteRoomServlet.java
 C:\Users\Portatil\Desktop\hotels\src\main\java\com\svalero\hotels\servlet\EditRoomServlet.java
 C:\Users\Portatil\Desktop\hotels\src\main\java\com\svalero\hotels\servlet\ListRoomServlet.java

@@ -17,8 +17,8 @@ public class DeleteRoomServlet extends HttpServlet {
     @Override
 
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-        String idAlbum = request.getParameter("id_album");
-        int id = Integer.parseInt(idAlbum);
+        String idRoom = request.getParameter("idRoom");
+        int id = Integer.parseInt(idRoom);
 
         try {
             Database database = new Database();

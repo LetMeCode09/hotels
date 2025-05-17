@@ -32,13 +32,13 @@
                         <h5 class="card-title texto-rosa fw-bold">Room <%= room.getRoomNumber() %></h5>
                         <p class="card-text">
                             <strong>💰 Price/night:</strong> <%= room.getPriceNight() %> €<br>
-                            <strong>📶 Available::</strong> <%= room.isAvailable() ? "Sí" : "No" %><br>
+                            <strong>📶 Available::</strong> <%= room.isAvailable() ? "Yes" : "No" %><br>
                             <strong>📝 Description:</strong> <%= room.getDescription() %>
                         </p>
                     </div>
 
                     <div class="d-flex flex-wrap gap-2 mt-3">
-                        <a href="CardDetailsServlet?id=<%= room.getIdRoom() %>" class="btn btn-rosa">View details</a>
+                        <a href="room-details.jsp?idRoom=<%= room.getIdRoom() %>" class="btn btn-rosa">View details</a>
 
                         <% if ("admin".equals(user.getRole())) { %>
                         <a href="EditRoomServlet?idRoom=<%= room.getIdRoom() %>" class="btn btn-warning">Edit</a>

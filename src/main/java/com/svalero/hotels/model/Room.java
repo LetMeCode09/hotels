@@ -34,7 +34,7 @@ public class Room {
 
     public boolean getAvailable() {return available;}
 
-    public double getRoomNumber() {return roomNumber;}
+    public int getRoomNumber() {return roomNumber;}
 
     public void setPriceNight(double priceNight) {this.priceNight = priceNight;}
 

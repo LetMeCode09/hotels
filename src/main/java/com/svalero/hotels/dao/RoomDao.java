@@ -73,8 +73,14 @@ public class RoomDao {
     }
 
     public boolean add(Room room) throws SQLException {
-        String sql = "INSERT INTO ROOM (id_room, room_number, type, price_night, ) VALUES (?,?,?,?,?,?,?,?,?,?)";
-        PreparedStatement statement = statement = connection.prepareStatement(sql);
+        String sql = "INSERT INTO ROOMS (room_number, type, price_night, description, available) VALUES (?,?,?,?,?)";
+        PreparedStatement statement = connection.prepareStatement(sql);
+
+        statement.setInt(1, room.getRoomNumber());
+        statement.setString(2, room.getType());
+        statement.setDouble(3, room.getPriceNight());
+        statement.setString(4, room.getDescription());
+        statement.setBoolean(5, room.isAvailable());
 
         //UPDATE, INSERT, DELETE SE EJEVUTAN CON ESTE
         int affectedRows = statement.executeUpdate();
@@ -86,7 +92,7 @@ public class RoomDao {
 
     public boolean deleteRoomById(int id) throws SQLException {
 
-        String sql = "DELETE FROM ROOM WHERE id_room = ?";
+        String sql = "DELETE FROM ROOMS WHERE id_room = ?";
         PreparedStatement statement = connection.prepareStatement(sql);
         statement.setInt(1, id);
 

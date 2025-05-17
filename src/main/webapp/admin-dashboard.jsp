@@ -30,6 +30,14 @@
                 <a href="admin-usuarios.jsp" class="btn btn-rosa">View Users</a>
             </div>
         </div>
+
+        <div class="col-md-4">
+            <div class="card fondo-rosita shadow-sm text-center p-3">
+                <h5 class="texto-rosa">Add new room</h5>
+                <p>Add new available rooms.</p>
+                <a href="add-room.jsp" class="btn btn-rosa">Add Room</a>
+            </div>
+        </div>
     </div>
 </div>
 

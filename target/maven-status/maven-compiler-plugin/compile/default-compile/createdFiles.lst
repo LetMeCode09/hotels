@@ -1,9 +1,9 @@
 com\svalero\hotels\servlet\SearchRoomServlet.class
-com\svalero\hotels\servlet\AddToUserServlet.class
 com\svalero\hotels\servlet\RegisterServlet.class
 com\svalero\hotels\dao\BookingDao.class
 com\svalero\hotels\servlet\LoginServlet.class
 com\svalero\hotels\servlet\ListRoomServlet.class
 com\svalero\hotels\servlet\LogoutServlet.class
 com\svalero\hotels\servlet\EditRoomServlet.class
+com\svalero\hotels\servlet\AddRoomServlet.class
 com\svalero\hotels\servlet\DeleteRoomServlet.class
