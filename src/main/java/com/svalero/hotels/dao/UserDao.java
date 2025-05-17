@@ -52,6 +52,8 @@ public class UserDao {
         }
     }
 
+
+
     public User getById(int id) throws SQLException {
         String sql = "SELECT * FROM users WHERE id_user = ?";
         try (PreparedStatement statement = connection.prepareStatement(sql)) {
@@ -87,14 +89,28 @@ public class UserDao {
 
     public List<User> getAll() throws SQLException {
         String sql = "SELECT * FROM users";
-        List<User> users = new ArrayList<>();
+        List<User> userList = new ArrayList<>();
+
         try (PreparedStatement statement = connection.prepareStatement(sql);
-             ResultSet rs = statement.executeQuery()) {
-            while (rs.next()) {
-                users.add(mapUser(rs));
+             ResultSet result = statement.executeQuery()) {
+
+            while (result.next()) {
+                User user = new User();
+                user.setIdUser(result.getInt("id_user"));
+                user.setUsername(result.getString("username"));
+                user.setFirstName(result.getString("first_name"));
+                user.setLastName(result.getString("last_name"));
+                user.setDni(result.getString("dni"));
+                user.setEmail(result.getString("email"));
+                user.setPhone(result.getString("phone"));
+                user.setPassword(result.getString("password"));
+                user.setRole(result.getString("role"));
+
+                userList.add(user);
             }
         }
-        return users;
+
+        return userList;
     }
 
     public List<User> search(String keyword) throws SQLException {

@@ -21,14 +21,15 @@
         }
     %>
 
-    <div class="container my-5 d-flex justify-content-center">
+    <h1  class="mb-4 text-center" >Rooms</h1>
 
-        <h1>Rooms</h1>
+    <div class="container my-5 d-flex justify-content-center">
 
         <div class="card fondo-rosita shadow-sm" style="width: 30rem;">
 
             <div class="card-body">
-                <h5 class="card-title texto-rosa">💰 <%= room.getPriceNight() %> €</h5>
+                <h5 class="card-title texto-rosa">Room number: <%= room.getRoomNumber()%></h5>
+                <p class="card-text"> Price: <%= room.getPriceNight() %> €</p>
                 <p class="card-text"><%= room.getDescription() %></p>
             </div>
 
@@ -45,7 +46,7 @@
                 <a href="DeleteRoomServlet?idRoom=<%=idRoom%>"
                    class="btn btn-outline-danger"
                    onclick="return confirm('¿Estás seguro de que deseas eliminar este álbum? Esta acción no se puede deshacer.');">
-                    Eliminar
+                    Delete
                 </a>
             </div>
 

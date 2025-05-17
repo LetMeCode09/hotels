@@ -27,7 +27,7 @@
             <div class="card fondo-rosita shadow-sm text-center p-3">
                 <h5 class="texto-rosa">User Management </h5>
                 <p>Manage accounts, roles, and data of registered users.</p>
-                <a href="admin-usuarios.jsp" class="btn btn-rosa">View Users</a>
+                <a href="user-list.jsp" class="btn btn-rosa">View Users</a>
             </div>
         </div>
 
