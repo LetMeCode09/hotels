@@ -34,7 +34,7 @@
     <label>Description:</label><br>
     <textarea name="description" rows="4" cols="40"></textarea><br><br>
 
-    <button type="submit">Add Room</button>
+    <button type="submit">Añadir Habitación</button>
 </form>
 
 </body>
