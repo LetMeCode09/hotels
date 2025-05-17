@@ -32,7 +32,7 @@
             <ul class="list-group list-group-flush">
                 <li class="list-group-item">Available: <%=room.getAvailable() ? "si" : "no"%>
                 </li>
-                <li class="list-group-item">TIPO: <%=room.getType()%>
+                <li class="list-group-item">type: <%=room.getType()%>
                 </li>
             </ul>
             <div class="card-body">
