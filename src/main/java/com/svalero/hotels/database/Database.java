@@ -20,7 +20,7 @@ public class Database {
 
     //Asegura que la conexión esté hecha antes de devolverla
     public Connection getConnection() throws ClassNotFoundException, SQLException {
-        if (connection != null && !connection.isClosed()) {
+        if (connection == null || connection.isClosed()) {
             connect();
         }
         return connection;
