@@ -36,6 +36,12 @@
                 <li class="nav-item">
                     <a class="nav-link" href="UserZoneServlet">My area</a>
                 </li>
+
+                <% } %>
+                <% if ("AritzOntal".equals(user.getUsername())) { %>
+                <li class="nav-item">
+                    <a class="nav-link" href="admin-dashboard.jsp">Dashboard</a>
+                </li>
                 <% } %>
                 <li class="nav-item">
                     <span class="nav-link texto-rosa" >Hi, <%= user.getUsername() %></span>

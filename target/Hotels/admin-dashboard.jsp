@@ -16,7 +16,7 @@
     <div class="row g-4 justify-content-center">
 
         <div class="col-md-4">
-            <div class="card fondo-rosita shadow-sm text-center p-3 h-100">
+            <div class="card fondo-rosita shadow-sm text-center p-3">
                 <h5 class="texto-rosa">Room Management</h5>
                 <p>View, edit, and delete the available hotel rooms.</p>
                 <a href="room-list.jsp" class="btn btn-rosa">View Rooms</a>
