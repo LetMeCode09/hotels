@@ -1,0 +1,11 @@
+html, body {
+    height: 100%;
+    margin: 0;
+    background-image: url('../image/fondo.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed; /* Para que el fondo se quede fijo */
+    display: flex;
+    flex-direction: column;
+}
