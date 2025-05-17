@@ -1,4 +1,4 @@
 package com.svalero.hotels.servlet;
 
-public class AddToUserServlet {
+public class DeleteUserServlet {
 }

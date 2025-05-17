@@ -15,7 +15,7 @@ public class BookingDao {
     }
 
     public boolean add(Booking booking) throws SQLException {
-        String sql = "INSERT INTO bookings (id_user, id_room, start_date, end_date) VALUES (?, ?, ?, ?, ?)";
+        String sql = "INSERT INTO bookings (id_user, id_room, start_date, end_date) VALUES (?, ?, ?, ?)";
         try (PreparedStatement statement = connection.prepareStatement(sql, Statement.RETURN_GENERATED_KEYS)) {
             statement.setInt(1, booking.getIdUser());
             statement.setInt(2, booking.getIdRoom());
